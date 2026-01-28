@@ -4,68 +4,85 @@
     <meta charset="UTF-8">
     <title>Md Kaunain Raza | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Md Kaunain Raza</h1>
-        <p>B.Tech Computer Science Engineering</p>
-        <img src="portfolio.jpg" alt="Md Kaunain Raza" class="profile-pic">
-        <a href="resume.html" class="btn">View Resume</a>
+<div class="container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <img src="portfolio.jpg" alt="Kaunain" class="profile-pic">
+
+        <h2>Md Kaunain Raza</h2>
+        <p>B.Tech CSE</p>
+
+        <div class="details">
+            <p>📧 kaunain@paruluniversity.ac.in</p>
+            <p>📍 India</p>
+            <p>💻 Java | Python</p>
+        </div>
+
+        <a href="resume.html" class="btn resume-btn">View Resume</a>
         <button onclick="toggleDark()" class="btn">Dark Mode</button>
+    </aside>
 
-    </header>
+    <!-- Main Content -->
+    <main class="content">
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Me</h2>
-        <p>
-            Computer Science student passionate about programming and learning new technologies.
-        </p>
-    </section>
+        <section>
+            <p id="typing"></p>
+            <p>
+                I am a Computer Science Engineering student passionate about
+                programming, problem solving, and learning modern technologies.
+            </p>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Data Structures & Algorithms</li>
-            <li>Git & GitHub</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Skills</h2>
+            <ul class="skills">
+                <li>Java</li>
+                <li>Python</li>
+                <li>DSA</li>
+                <li>Git & GitHub</li>
+            </ul>
+        </section>
 
-    <!-- Projects Section -->
-    <section class="projects">
-        <h2>Projects</h2>
+        <section>
+            <h2>Projects</h2>
 
-        <div class="project">
-            <h3>Student Management System</h3>
-            <p>Java-based console application to manage student records using OOP concepts.</p>
-        </div>
+            <div class="project">
+                <h3>Student Management System</h3>
+                <p>Java console application using OOP concepts.</p>
+            </div>
 
-        <div class="project">
-            <h3>Temperature Converter</h3>
-            <p>Python program to convert temperature between Celsius and Fahrenheit.</p>
-        </div>
-    </section>
+            <div class="project">
+                <h3>Temperature Converter</h3>
+                <p>Python program to convert Celsius ↔ Fahrenheit.</p>
+            </div>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:2403051050332@paruluniversity.ac.in">
-            2403051050332@paruluniversity.ac.in</a></p>
-        <p>GitHub: <a href="https://github.com/kaunain8766" target="_blank">
-            github.com/kaunain8766</a></p>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Md Kaunain Raza</p>
-    </footer>
+    </main>
+</div>
+
+<script>
+function toggleDark() {
+    document.body.classList.toggle("dark");
+}
+</script>
+<script>
+const text = "I am a Computer Science Engineering student passionate about programming, problem solving, and learning modern technologies.";
+let i = 0;
+
+function typingEffect() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typingEffect, 40);
+    }
+}
+typingEffect();
+</script>
 
 </body>
 </html>
-
